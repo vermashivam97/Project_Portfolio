@@ -1,8 +1,24 @@
+@import url(https://weloveiconfonts.com/api/?family=zocial);
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
+
+
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+p{
+	color:	#A52A2A;
+}
+
 a {
   color: #00B7FF;
 }
+
+
+
+
