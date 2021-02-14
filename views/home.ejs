@@ -6,31 +6,36 @@
   	<link rel='stylesheet' href='/stylesheets/bootstrap.min.css'>
   
   </head>
-  <body bgcolor="blue">
+  <body bgcolor="black">
 
      <!-- <h1><%= title %></h1> -->
-<nav class="navbar navbar-expand-lg navbar-light top_bar">
+<nav class="navbar navbar-expand-lg navbar-light top_bar ">
 
 <img src="/images/sv_tech.jpg" height="100" width="200">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light toRight">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" href="#">Hidden brand</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
+
+	   <% for(var navIterator=0; navIterator < navItems.length; navIterator++) { %>
+   		<li class="nav-item active">
+        	<a class="nav-link" href="<%= navItems[navIterator].route %>"><%= navItems[navIterator].name %> </a>
+      	</li>
+	
+	   <% } %>
     </ul>
     
   </div>
+
+
+
+
+
+
+
+
 </nav>
 </nav>
 

@@ -29,4 +29,9 @@ background-color: #033249;
 
 }
 
+.toRight{
+	    margin-left: auto !important;
+	    margin-right : 50px !important;
+}
+
 
