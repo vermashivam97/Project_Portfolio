@@ -4,23 +4,30 @@ let router = express.Router();
 let routingData = [
 	{
 		"name" : "Home",
-		"route" : "/"
+		"route" : "/",
+		"font" : "fa fa-home"
+		
 	},
 	{
 		"name" : "About",
-		"route" : "/"
+		"route" : "/about",
+	"font" : "fa fa-user"
 	},
 	{
 		"name" : "Services",
-		"route" : "/"
+		"route" : "/services",
+		"font" : "fa fa-tasks"
 	},
 	{
 		"name" : "Projects",
-		"route" : "/"
+		"route" : "/projects",
+		"font" : "fa fa-terminal"
 	},
 	{
 		"name" : "Contact",
-		"route" : "/"
+		"route" : "/contact",
+		"font" : "fa fa-id-badge"
+		
 	}
 
 
@@ -44,8 +51,37 @@ router.get('/',(req,res)=>{
 
 
 router.get('/about',(req,res)=>{
-
+res.render('about',{
+		title:"Portfolio",
+		navItems:routingData
+	});
 });
+
+router.get('/services',(req,res)=>{
+res.render('services',{
+		title:"Portfolio",
+		navItems:routingData
+	});
+});
+
+router.get('/projects',(req,res)=>{
+res.render('projects',{
+		title:"Portfolio",
+		navItems:routingData
+	});
+});
+router.get('/contact',(req,res)=>{
+res.render('contact',{
+		title:"Portfolio",
+		navItems:routingData
+	});
+});
+
+router.post('/contact',(req,res)=>{
+	res.redirect('/');
+});
+
+
 
 
 module.exports = router;

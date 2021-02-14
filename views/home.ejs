@@ -3,58 +3,32 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' type="text/css" href='/stylesheets/style.css' >
-  	<link rel='stylesheet' href='/stylesheets/bootstrap.min.css'>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css'>
+    
   
   </head>
-  <body bgcolor="black">
+  <body >
 
-     <!-- <h1><%= title %></h1> -->
-<nav class="navbar navbar-expand-lg navbar-light top_bar ">
+<%- include('partials/navContainer') %>
 
-<img src="/images/sv_tech.jpg" height="100" width="200">
-<nav class="navbar navbar-expand-lg navbar-light bg-light toRight">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-
-	   <% for(var navIterator=0; navIterator < navItems.length; navIterator++) { %>
-   		<li class="nav-item active">
-        	<a class="nav-link" href="<%= navItems[navIterator].route %>"><%= navItems[navIterator].name %> </a>
-      	</li>
-	
-	   <% } %>
-    </ul>
-    
-  </div>
-
-
-
-
-
-
-
-
-</nav>
-</nav>
-
-
-
-
-
-
-<span class="name">
-  some text here
-
-</span>
-
-
-
-
+<div class = "mainContainer">
+<img src = '/images/home.jpg' class="imgSize">
+<div class="centerAlign">
+<span> Solving daily challenges of SME 's and MSME 's in sales, analytics, management and financing domain, leveraging AI Tech.   </span>
 <br>
-    <center>
-      
-    </center>
-  </body>
+<br>
+<br>
+<form method="get" action="/about">
+   <button type="submit" class="btn btn-lg btn-dark buttonColor">About Me</button>
+</form>
+</div>
+<br>
+
+
+
+</div>
+
+
+<%- include('partials/footerNav') %>
+
 </html>
